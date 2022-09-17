@@ -1,6 +1,9 @@
 import { PayloadSendSNS } from "./PayloadSendSNS";
-
-export class EventSendSNS {
+export interface EventSendSNS {
     event: string;
     payload: PayloadSendSNS;
 }
+// export class EventSendSNS {
+//     event: string;
+//     payload: PayloadSendSNS;
+// }
