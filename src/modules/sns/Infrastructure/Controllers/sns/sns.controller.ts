@@ -16,6 +16,11 @@ export class SnsController {
         this.snsService.sendEventSNSTopic(event);
         return event;
     }
+    @Post('eventfifo')
+    async EnviarEventoSNSFIFO(@Body() event: EventSendSNS): Promise<EventSendSNS> {
+        this.snsService.sendEventSNSFIFOTopic(event);
+        return event;
+    }
     @Post('sqsevent')
     async RecibirEventoSQS(@Body() event: EventSendSNS): Promise<EventSendSNS> {
         console.log(event);
