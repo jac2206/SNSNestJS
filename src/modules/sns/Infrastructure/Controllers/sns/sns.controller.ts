@@ -13,7 +13,7 @@ export class SnsController {
   }
   @Post('event')
   async EnviarEventoSNS(@Body() event: EventSendSNS): Promise<EventSendSNS> {
-    // this.snsService.sendEventSNSTopic(event);
+    this.snsService.sendEventSNSTopic(event);
     return event;
   }
   @Post('eventfifo')
