@@ -1,3 +1,4 @@
+import { SNS } from "aws-sdk";
 import { PublishCommand, SNSClient } from '@aws-sdk/client-sns';
 import { Injectable } from '@nestjs/common';
 import { EventSendSNS } from '../../Domain/Entities/EvenSendSNS';
